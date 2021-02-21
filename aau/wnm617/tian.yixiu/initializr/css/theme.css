@@ -1,0 +1,155 @@
+.wrapper{
+	max-width:1000px;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+
+ul{
+  list-style:none;
+}
+
+
+ li{
+   width:200px;
+   height:30px;
+   padding:10px;
+  color:#276678;
+  text-align:center;
+  display:inline-block;
+background-color:#1687a7;
+ font-family: gill sans;
+  font-size:1.5em;
+  border-radius:25px;
+   
+}
+
+li:hover{
+  color:#276678;
+  background-color:#d3e0ea;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+
+
+a:hover{
+	color:#276678;
+}
+
+.title{
+	text-decoration: none;
+    font-size:3em;
+    font-family:'Josefin Sans', sans-serif;
+    color:#276678;
+    background-color:#d3e0ea;
+    border-radius: 50%;
+    width:300px;
+    height:50px;
+    text-align: center;
+    margin:30px;
+
+}
+
+.main-container section{
+	max-width:1000px;
+	margin-right:auto;
+	margin-left: auto;
+	background-color:#d3e0ea;
+    padding:1em;
+    overflow: hidden;
+    position: relative;
+    border-radius:1em;
+        box-shadow:  0 0 10px rgba(0,0,0,0.1);
+        color:#276678;
+        margin:30px;
+        padding:30px;
+        font-family:'Josefin Sans', sans-serif;
+        font-size:1.5em;
+}
+
+.main article header{
+	border: 2px solid #d3e0ea;
+  padding: 10px;
+  border-radius: 25px;
+  color:#1687a7;
+  margin:30px;
+  padding:30px;
+  font-family:'Josefin Sans', sans-serif;
+  font-size:1.5em;
+}
+
+
+
+.main article header>h1{
+  color:#1687a7;
+  font-family:'Josefin Sans', sans-serif;
+  font-size:1.5em;
+}
+
+
+
+.main article footer{
+	border: 2px solid #276678;
+  padding: 10px;
+  border-radius: 25px;
+  color:#276678;
+  margin:30px;
+  padding:30px;
+  font-family:'Josefin Sans', sans-serif;
+  font-size:1.5em;
+}
+
+
+.main article footer>h3{
+  color:#276678;
+  font-family:'Josefin Sans', sans-serif;
+  font-size:1.5em;
+}
+
+
+.main aside{
+	max-width:1000px;
+	margin-right:auto;
+	margin-left: auto;
+	background-color:#276678;
+    padding:1em;
+    overflow: hidden;
+    position: relative;
+    border-radius:1em;
+        box-shadow:  0 0 10px rgba(0,0,0,0.1);
+        color:#f6f5f5;
+        margin:30px;
+        padding:30px;
+        font-family:'Josefin Sans', sans-serif;
+        font-size:1.5em;
+}
+
+
+
+.footer-container{
+
+	max-width:950px;
+	margin-right:auto;
+	margin-left: auto;
+	background-color:#1687a7;
+    overflow: hidden;
+    position: relative;
+    border-radius:1em;
+}
+
+.footer-container footer>h3 {
+    color:#f6f5f5;
+    font-family:'Josefin Sans', sans-serif;
+    font-size:1.5em;
+    text-align: center;
+}
+
+
+
+
+
+
+
