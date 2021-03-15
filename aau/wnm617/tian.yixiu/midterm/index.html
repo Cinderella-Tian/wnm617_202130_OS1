@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animal Tracker</title>
+
+
+	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" href="css/app.css">
+
+
+
+	<script src="lib/js/jquery-2.2.4.min.js"></script>
+
+	<script src="js/signin.js"></script>
+	<script src="js/app.js"></script>
+
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+
+	<section data-role="page" id="signin-page">
+
+		<div data-role="main" class="display-flex flex-vertical">
+
+			<div class="flex-stretch"></div>
+
+			<div class="flex-none">
+
+			<form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+
+				<div class="form-control">
+					<label for="signin-username" class="form-label">Username</label>
+					<input class="form-input" type="text" id="signin-username" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<label for="signin-password" class="form-label">Password</label>
+					<input class="form-input" type="password" id="signin-password" data-role="none">
+				</div>
+				<div class="form-control">
+					<input type="submit" class="form-button" value="Sign In" data-role="none">
+				</div>
+				
+			</form>
+
+		</div>
+			
+
+		</div>
+		
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section data-role="page" id="recent-page">
+
+		<div data-role="main">
+			<!--
+			<hr>
+			<button data-activate=".changeme" data-role="none">activate</button>
+			<button data-deactivate=".changeme" data-role="none">deactivate</button>
+			<button data-toggle=".changeme" data-role="none">toggle</button>
+			<hr> 
+		<div class="changeme">I am a div</div>
+	-->
+			</div>
+
+		<!-- footer data-role="footer">
+			<a href="#recent-page">Map</a>
+			<a href="#list-page">List</a>
+			<a href="#user-profile-page">Profile</a>
+		</footer -->
+
+
+		<footer data-role="footer" data-template="#footer-template">
+		</footer>
+		
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section data-role="page" id="list-page">
+
+		<header data-role="header">
+			<h1>Search</h1>
+			<ul>
+				<li class="flex-stretch"></li>
+				<li><a href="#" class="js-list-add-animal" data-activate="#list-add-modal">&plus;</a></li>
+			</ul>
+		</header>
+
+		<div data-role="main">
+
+			<!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
+
+
+			<div class="form-control-animal-list">
+				<div class="overscroll">
+
+			<ul>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 1</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 2</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 3</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 4</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 5</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 6</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 7</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 8</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 9</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 10</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 1</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 2</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 3</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 4</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 5</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 6</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 7</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 8</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 9</a></li>
+				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 10</a></li>
+				<li data-template="#animal-link-template"></li>
+				<li data-template="#animal-link-template"></li>
+				<li data-template="#animal-link-template"></li>
+				<li data-template="#animal-link-template"></li>
+			</ul>
+		</div>
+
+		
+
+		</div>
+
+			
+		</div>
+
+
+		<footer data-role="footer" data-template="#footer-template">
+		</footer>
+
+		<!-- footer data-role="footer">
+			<a href="#recent-page">Map</a>
+			<a href="#list-page">List</a>
+			<a href="#user-profile-page">Profile</a>
+		</footer -->
+		<div class="modal" id="list-add-modal">
+
+			<div class="modal-back" data-deactivate="#list-add-modal"></div>
+			<form class="modal-popup" data-ajax="false" id="list-add-form">
+
+				<div class="modal-head">Add a new dog</div>
+				<div class="modal-body">
+
+					<div class="form-control">
+					<label for="list-add-name" class="form-label">Name</label>
+					<input class="form-input" type="text" id="list-add-name" data-role="none">
+				</div>
+
+
+				<div class="form-control">
+					<label for="list-add-color" class="form-label">Color</label>
+					<input class="form-input" type="text" id="list-add-type" data-role="none">
+				</div>
+
+
+				<div class="form-control">
+					<label for="list-add-breed" class="form-label">Breed</label>
+					<input class="form-input" type="text" id="list-add-breed" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<label for="list-add-location" class="form-label">Location</label>
+					<input class="form-input" type="text" id="list-add-breed" data-role="none">
+				</div>
+
+				<div class="form-control">
+					<label for="list-add-date" class="form-label">Date</label>
+					<input class="form-input" type="text" id="list-add-breed" data-role="none">
+				</div>
+
+
+
+				</div>
+
+				<div class="modal-foot display-flex">
+					<div class="flex-stretch"></div>
+					<div class="flex-none">
+						<a href="#" ata-deactivate="#list-add-modal">Submit</a>
+					</div>
+				</div>
+				
+
+			</form>
+			
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+
+    <!-- User Data Section -->
+
+
+	<section data-role="page" id="user-profile-page">
+
+		<header data-role="header">
+			<h1>Profile</h1>
+			<a href="#" data-rel="back">Back</a>
+		</header>
+
+		<div data-role="main">
+
+			<div class="form-control">
+				<p>
+					<a href="#" class="js-logout">Sign Out</a>
+				</p>
+
+				<div class="floater top right">
+
+					<a href="#" class="icon" data-activate="#user-settings-modal"><img src="icon/shishkabob.svg" alt=""></a>
+				</div>
+
+
+				<div class="modal" id="user-settings-modal">
+
+			<div class="modal-back" data-deactivate="#user-settings-modal"></div>
+
+
+			<div class="modal-drawer right">
+
+				<div class="modal-head display-flex">
+					<div class="flex-none">Head</div>
+					<div class="flex-stretch"></div>
+					<div class="flex-none"><a href="#" data-deactivate="#user-settings-modal">&times;</a></div>
+				</div>
+				<div class="modal-body">
+					<div class="overscroll">
+
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia molestias commodi est, ipsa quis tempora dolore, accusamus sed animi, vitae possimus nobis, blanditiis a sint explicabo. Ratione odio blanditiis error iste eveniet nobis? Autem maxime dolores, culpa officia quibusdam maiores quo laboriosam aperiam minima accusantium molestias veniam nesciunt repellendus.</p>
+					<p>Voluptates commodi saepe quis quaerat totam quia deleniti, tempore maiores officia at dolore repellat harum magni non dolores nam nostrum, expedita incidunt hic sit error? Velit, consequuntur consectetur at animi quam similique aperiam rem illo deleniti vel ipsum esse blanditiis, ea neque, rerum quod fugiat, necessitatibus ducimus? In, enim officiis.</p>
+					<p>Enim, harum quia excepturi! Deserunt, fugit? Distinctio architecto quaerat reiciendis autem dolore quod quo id omnis, quia ipsam, iste nihil, ullam placeat maxime, sapiente! Labore quos distinctio, suscipit qui totam quam iste deserunt voluptatibus sapiente consequatur alias vitae, provident minima ad illo consectetur pariatur, repellendus, vero! Est doloremque quam dicta.</p>
+					<p>Doloribus cum quisquam odio rem, excepturi, sit, officiis natus nemo officia hic mollitia aperiam recusandae culpa a repudiandae, nam deleniti! Dicta, maxime, explicabo. Quas laborum impedit nulla eligendi dicta placeat, esse similique expedita delectus autem aliquam recusandae velit sit sint hic, excepturi, omnis, corrupti maiores assumenda dolorem enim debitis temporibus.</p>
+					<p>Doloremque facilis architecto illum aliquam, culpa alias ipsum maxime nisi, reiciendis ullam temporibus sequi magni. Praesentium exercitationem quaerat eaque ratione a odit quod natus architecto repudiandae non voluptates necessitatibus delectus dignissimos ea laborum quis totam nobis, odio dolor porro distinctio. Quam architecto, cupiditate obcaecati doloribus cum, veritatis quaerat repellat laborum.</p>
+					<p>Laboriosam cumque nihil aperiam, officia dolor quam iusto, voluptates, modi delectus deleniti quo enim omnis qui. Eveniet nulla velit cum porro earum laborum dolorem quisquam, quam accusamus! Asperiores, sapiente officia odio cumque quibusdam officiis at incidunt praesentium? Aspernatur ad, nam quisquam praesentium tempore omnis aperiam in sit! Aspernatur, libero, quibusdam?</p>
+					<p>Ex error, accusamus explicabo illum aliquid quis in cum atque corrupti sequi ad blanditiis ea doloribus praesentium rem, cupiditate hic itaque nemo deleniti inventore vero nihil quaerat, obcaecati veritatis eaque? Facere optio nisi architecto, delectus, autem laboriosam minima deleniti, ratione voluptas voluptatum pariatur ipsa quidem reprehenderit accusamus voluptatibus fugit, ea.</p>
+					<p>At cumque quaerat, pariatur soluta, et ut voluptas, facere accusamus facilis error laudantium cum quod deserunt doloremque repellendus. Saepe ipsam, excepturi velit, maiores quae similique asperiores nostrum quidem reiciendis quas placeat ipsa, voluptatibus accusamus. Eos et est quas natus ipsa consectetur sunt inventore similique nulla. Enim error reiciendis ad, similique!</p>
+					<p>Nemo alias est, et eveniet? In est neque possimus quam eius molestias numquam necessitatibus nostrum, enim blanditiis illo ad dignissimos libero corporis voluptatum natus eveniet iure consectetur distinctio sunt perspiciatis fuga commodi mollitia. Fugit voluptatum exercitationem nostrum laborum praesentium porro quam numquam amet nihil fugiat, velit cum nam deserunt tenetur?</p>
+					<p>Doloremque quaerat optio dicta blanditiis libero sapiente expedita quos voluptates quod! Fuga reprehenderit voluptates neque voluptate, optio, totam. Deleniti mollitia optio, dolorum modi sapiente eaque, maiores corrupti illum veritatis non doloribus, quo in asperiores provident ut. Velit harum optio aliquam iste tempora, minus doloremque, autem iure nobis, cum neque veniam.</p>
+
+
+				</div>
+			</div>
+				
+
+			</div>
+			
+		</div>
+
+
+
+				</div>
+			
+		</div>
+
+		<!-- footer data-role="footer">
+			<a href="#recent-page">Map</a>
+			<a href="#list-page">List</a>
+			<a href="#user-profile-page">Profile</a>
+		</footer -->
+
+		<footer data-role="footer" data-template="#footer-template">
+		</footer>
+
+
+		
+		
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Animal Data Section -->
+
+	<section data-role="page" id="animal-profile-page">
+
+		<header data-role="header">
+			<h1>Animal Profile</h1>
+			<a href="#" data-rel="back">Back</a>
+		</header>
+
+		<div data-role="main">
+
+			<div class="form-control-animal-profile">
+
+			<ul>
+				<li class="form-animal-profile">Breed</li>
+				<li class="form-animal-profile">Location</li>
+				<li class="form-animal-profile">Date</li>
+				<li class="form-animal-profile">Color</li>
+			</ul>
+
+		</div>
+
+
+			
+					<div class="delete-edit-button">
+						<a href="#animal-profile-edit-page" class="form-button-animal-delete-edit">Edit</a>
+					<a href="#" class="form-button-animal-delete-edit">Delate</a>
+				
+					
+				</div>
+			
+		</div>
+
+		<footer data-role="footer" data-template="#footer-template">
+		</footer>
+
+
+	</section>
+
+		<!-- footer data-role="footer">
+			<a href="#recent-page">Map</a>
+			<a href="#list-page">List</a>
+			<a href="#user-profile-page">Profile</a>
+		</footer -->
+     <script type="text/template" id="footer-template">
+		<ul>
+         <li><a href="#recent-page">
+         	<img src="icon/map.png">
+         </a></li>
+         <li><a href="#list-page">
+         	<img src="icon/list.png">
+         </a></li>
+         <li><a href="#user-profile-page">
+         	<img src="icon/profile.png">
+         </a></li>
+         </ul>
+		</script>
+
+		<script type="text/template" id="animal-link-template">
+		this is an animal link
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-role="page" id="animal-profile-edit-page">
+
+		<header data-role="header">
+			<h1>Edit</h1>
+			<a href="#" data-rel="back">Back</a>
+		</header>
+
+		<div data-role="main">
+
+			<div class="flex-none">
+
+			<form class="form" id="breed" data-ajax="false" style="padding:1em">
+
+				<div class="form-control-animal-profile-form">
+					<label for="breed" class="form-label">Breed</label>
+					<input class="form-input" type="text" id="breed" data-role="none">
+				</div>
+
+				<div class="form-control-animal-profile-form">
+					<label for="color" class="form-label">Color</label>
+					<input class="form-input" type="text" id="color" data-role="none">
+				</div>
+
+				<div class="form-control-animal-profile-form">
+					<label for="location" class="form-label">Location</label>
+					<input class="form-input" type="password" id="location" data-role="none">
+				</div>
+
+				<div class="form-control-animal-profile-form">
+					<label for="date" class="form-label">Date</label>
+					<input class="form-input" type="password" id="date" data-role="none">
+				</div>
+
+				<div class="form-control-animal-profile-form">
+					<a href="#animal-profile-page" class="form-button-animal-profile-form">Save</a>
+				
+				</div>
+				
+			</form>
+
+		</div>
+			
+		</div>
+		
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</body>
+</html>
