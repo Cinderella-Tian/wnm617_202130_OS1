@@ -44,17 +44,17 @@
   '{{repeat(50)}}',
   {
     id: '{{index(1)}}',
-    user_id: '{{integer(1,10)}}',
+    user_id: '{{integer(1,9)}}',
     
     
     name: '{{company()}}',
     
-    type: '{{random("dog","cat","horse")}}',
+    type: '{{random("dog","dog","dog")}}',
     breed: function(tags) {
       var breeds = {
         dog:["labrador","pitbull","dashsund"],
-        cat:["calico","ginger","tuxedo","siamese"],
-        horse:["shetland","andalusian","unicorn"]
+        dog:["retriever","husky","corgi","chihuahua"],
+        dog:["alaskan","spotty","pug"]
       };
       var chosen_type = breeds[this.type];
       var chosen_index = tags.integer(0,chosen_type.length-1);
