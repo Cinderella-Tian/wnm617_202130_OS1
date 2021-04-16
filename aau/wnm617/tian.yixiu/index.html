@@ -13,6 +13,9 @@
 
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
 
+	<script src="js/functions.js"></script>
+	<script src="js/pages.js"></script>
+	<script src="js/parts.js"></script>
 	<script src="js/signin.js"></script>
 	<script src="js/app.js"></script>
 
@@ -85,26 +88,31 @@
 
 
 
-				 <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+				<form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+					<div class="form-control">
+						<label for="register-username" class="form-label">Username</label>
+						<input class="form-input" type="text" id="register-username" data-role="none">
+					</div>
+					<div class="form-control">
+						<label for="register-email" class="form-label">Email</label>
+						<input class="form-input" type="text" id="register-email" data-role="none">
+					</div>
+					<div class="form-control">
+						<label for="register-password" class="form-label">Password</label>
+						<input class="form-input" type="password" id="register-password" data-role="none">
+					</div>
+					<div class="form-control">
+	 					<a href="#recent-page" class="form-button signin-button">Save</a>
+	 				</div>
+				</form>
 
-
-				 	<div class="form-control">
-					<label for="signin-username" class="form-label">Create an username</label>
-					<input class="form-input" type="text" id="signin-username" data-role="none">
+				<div class="register">
+					Already have an account?<span><a href="#signin-page">Sign in here!</a></span>
 				</div>
 
-				<div class="form-control">
-					<label for="signin-password" class="form-label">Create a password</label>
-					<input class="form-input" type="password" id="signin-password" data-role="none">
-				</div>
-				<div class="form-control">
-					<input type="submit" class="form-button" value="Sign In" data-role="none">
-				</div>
 
 
-					
-
-				 </form>
+				 
 		   </div>
 		</div>
 	 </section>
@@ -147,7 +155,10 @@
 
 			<div class="modal" id="recent-test-modal">
 			<div class="modal-popup small" data-deactivate="#recent-test-modal">
-				<div class="modal-body">popup</div>
+				<div class="modal-body">
+					<div class="card display-stretch"><p>Labrador</p></div>
+	 					<div class="card display-stretch"><p>Pleasanton</p></div>
+				</div>
 			</div>
 		</div>
 
@@ -186,62 +197,44 @@
 
 
 
+
+
+
+
+
+
+
+
 	<section data-role="page" id="list-page">
 
 		<header data-role="header">
+
 			<h1>Search</h1>
+
 			<ul>
+
 				<li class="flex-stretch"></li>
 				<li><a href="#" class="js-list-add-animal" data-activate="#list-add-modal">&plus;</a></li>
+
 			</ul>
+			
 		</header>
 
 		<div data-role="main">
 
-			<!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
+			<div class="overscroll">
 
+				<div class="animallist"></div>
+				
 
-			<div class="form-control-animal-list">
-				<div class="overscroll">
-
-			<ul>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 1</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 2</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 3</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 4</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 5</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 6</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 7</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 8</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 9</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 10</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 1</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 2</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 3</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 4</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 5</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 6</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 7</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 8</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 9</a></li>
-				<li><a href="#animal-profile-page" class="form-button-animal-list">Animal 10</a></li>
-				<li data-template="#animal-link-template"></li>
-				<li data-template="#animal-link-template"></li>
-				<li data-template="#animal-link-template"></li>
-				<li data-template="#animal-link-template"></li>
-			</ul>
-		</div>
-
-		
-
-		</div>
-
+			</div>
 			
+
 		</div>
 
 
-		<footer data-role="footer" data-template="#footer-template">
-		</footer>
+		<footer data-role="footer" data-template="#footer-template"></footer>
+
 
 		<!-- footer data-role="footer">
 			<a href="#recent-page">Map</a>
@@ -314,11 +307,12 @@
 	<section data-role="page" id="user-profile-page">
 
 		<header data-role="header">
-			<h1>Profile</h1>
 			<a href="#" data-rel="back">Back</a>
 		</header>
 
 		<div data-role="main">
+
+			<div class="profile"></div>
 
 				<div class="floater top right">
 
@@ -403,34 +397,18 @@
 					</ul>
 				</div>
 			</div>
-			<div class="header">
+			<div class="header animal-nav">
 				<ul>
 					<li class="flex-stretch"><a href="#">map</a></li>
 					<li class="flex-stretch"><a href="#">info</a></li>
 				</ul>
 			</div>
 			<div class="animal-bottom">
-				<div class="overscroll">
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum impedit, quae? Ratione voluptatum repellendus, praesentium sunt soluta omnis officiis debitis ullam ad voluptatem fuga, mollitia. Qui minus consectetur error, provident suscipit ipsam ducimus illum alias aliquam voluptate quae repellat enim deleniti aperiam ipsum illo eaque, distinctio doloremque veritatis maiores magni.</p>
-					<p>Dolore nemo, error corporis quas officiis! Ea ut quo eaque ducimus quis delectus praesentium molestiae. Eaque nostrum excepturi in eos error eius numquam asperiores unde suscipit aspernatur nisi illum quis debitis, et, dolorem minima sequi maxime iusto ea soluta quasi nemo? Consequuntur ad minus beatae asperiores laudantium commodi odio, incidunt!</p>
-					<p>Quam, reprehenderit tenetur, pariatur, vitae consequuntur a placeat inventore deserunt fugiat temporibus unde dolorem nesciunt. Et, enim vitae nobis, porro consequatur quas! Fugiat sequi sint neque natus quod nostrum sed omnis maiores nulla, maxime iste earum, atque blanditiis ducimus minus nihil quas impedit laudantium sunt fugit dolorum vero mollitia praesentium?</p>
-					<p>Architecto, dicta, deleniti, culpa ipsa voluptatibus aut adipisci accusamus est in, officiis sequi perferendis atque similique harum dolor nesciunt voluptates facere excepturi vel quae consectetur mollitia asperiores nemo! Ipsam ad a facilis iure doloremque qui optio dignissimos nihil soluta, quaerat nostrum nisi incidunt blanditiis minus eos laudantium, ut ducimus laborum.</p>
-				</div>
+				<div class="animal-bottom-section animal-map map"></div>
+				<div class="animal-bottom-section animal-info"></div>
+
+				
 			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 			
 
