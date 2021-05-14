@@ -1,5 +1,4 @@
 
-// Check and change data
 const checkSigninForm = async () => {
    let username = $("#signin-username").val();
    let password = $("#signin-password").val();
@@ -28,11 +27,8 @@ const checkSigninForm = async () => {
 }
 
 
-// Separation of concerns - seperating out every part of application if is possible
-
-// Change page base on data
 const checkUserId = () => {
-   let p = ["#signin-page","#signup-page",""];
+   let p = ["#signin-page","#signup-page","#signup-second-page",""];
 
    if(sessionStorage.userId === undefined) {
       // not logged in
@@ -44,3 +40,4 @@ const checkUserId = () => {
          $.mobile.navigate("#recent-page");
    }
 }
+
