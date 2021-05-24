@@ -181,6 +181,9 @@ const ChooseAnimalPage = async () => {
    $("#location-choose-animal")
       .html(FormSelectOptions(d.result))
 }
+
+
+
 const ChooseLocationPage = async () => {
    let map_el = await makeMap("#choose-location-page .map");
    makeMarkers(map_el,[])
