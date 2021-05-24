@@ -191,7 +191,23 @@ const checkSearchForm = async () => {
 }
 const checkRecentSearchForm = async () => {
    let search = $("#recent-search-value").val();
-   console.log(search)
+   console.log(search);
+
+   let animals = await query({
+      type: "search_recent_animals",
+      params: [search, sessionStorage.userId]
+   });
+
+   recentAnimalResult(
+      animals.result,
+      "No results found."
+   );
+   
+   if (search !== "") {
+      RecentPage(search);
+   } else {
+      RecentPage(animals.result)
+   }
 }
 
 
