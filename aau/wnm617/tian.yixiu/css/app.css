@@ -61,8 +61,16 @@ a:hover{
 
 
 
+.logo{
+	width:100%;
+}
 
-
+.logo>img{
+	width:80%;
+	padding:30px;
+	margin:30px;
+	margin-bottom: 150px;
+}
 
 /* Layout Classes */
 
@@ -396,7 +404,7 @@ a:hover{
 
 
 .floater .icon {
-	padding:1em;
+	padding:1rem;
 	display: block;
 }
 
@@ -456,15 +464,21 @@ a:hover{
 	color:var(--color-main-dark);
 }
 
-.form-input{
-	width:100%;
-	display:inline-block;
-	border:1px solid var(--color-main-medium);
-	margin:0;
-	padding:0.5em 1em;
-	border-radius: 0.3em;
-	outline:0;
-	font:inherit;
+.form-input,
+.form-button,
+.form-select select {
+    webkit-appearance:none;
+}
+
+.form-input {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid var(--color-neutral-medium);
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    outline: 0;
+    font:inherit;
 }
 
 .form-button{
@@ -569,6 +583,7 @@ a:hover{
 	overflow: hidden;
 }
 
+
 .animal-bottom-section{
 	position:absolute;
 	top:0;
@@ -586,6 +601,10 @@ a:hover{
 .animal-nav li {
   position:relative;
 }
+
+
+
+
 .animal-nav .active::after {
   content:'';
   position:absolute;
@@ -595,16 +614,18 @@ a:hover{
   height:3px;
   background-color:var(--color-main-medium);
 }
+
+
 .animal-bottom-section {
   display:none;
 }
 .animal-bottom-section.active {
   display:block;
 }
-
 .animal-info {
-  padding:1em;
+  padding:2em;
 }
+
 
 
 
@@ -631,6 +652,7 @@ a:hover{
 
 .animallist-name{
 	font-size: 1.3em;
+	color:var(--color-neutral-dark);
 }
 
 
@@ -644,6 +666,80 @@ a:hover{
 .animal-jump * {
   pointer-events:none;
 }
+
+.animal-name{
+	font-size:1em;
+	padding:10px;
+    margin: 10px;
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-light);
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+.animal-type{
+	font-size:0.8em;
+	padding:10px;
+    margin: 10px;
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-light);
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+.animal-breed{
+	font-size:0.8em;
+	padding:10px;
+    margin: 10px;
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-light);
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+.animal-description{
+	font-size:0.8em;
+	padding:10px;
+    margin: 10px;
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-light);
+    border-radius: 0.3em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.animal-info-div{
+  margin: 1em;
+  padding: 0.5em 1em;
+  border-bottom: var(--color-neutral-light) solid 2px;
+  border-radius: 0.3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	
@@ -674,6 +770,76 @@ a:hover{
     object-fit: cover;
     padding: 2em;
 }
+
+.user-profile-name{
+	margin-top:20px;
+	font-size: 1.3em;
+	background-color: var(--color-neutral-light);
+	color:var(--color-neutral-dark);
+	padding:1em;
+	text-align: center;
+}
+
+.user-profile-email{
+	margin-top:20px;
+	font-size: 1em;
+	background-color: var(--color-neutral-light);
+	color:var(--color-neutral-dark);
+	padding:1em;
+	text-align: center;
+
+}
+
+.settings a:{
+	padding:1em;
+	color:var(--color-neutral-dark);
+	text-align: center;
+    border-radius: 100px;
+    padding: 0.2em;
+    margin:20px;
+}
+
+
+.user-profile-settings{
+	margin:10px;
+	padding:1em;
+	border-radius: 0.3em;
+	border-width: 0;
+	background-color: var(--color-neutral-light);
+	outline: 0;
+	width: 100%;
+	display: inline-block;
+	font:inherit;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -835,6 +1001,41 @@ a:hover{
   color: var(--color-main-medium);
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ICON SWAP */
+.icon-swap {
+  width:1em;
+  height:1em;
+  display:inline-block;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+.icon-swap.map-icon { background-image:url(../img/icon/map.svg); }
+.sploofactive .icon-swap.map-icon { background-image:url(../img/icon/list.svg); }
+.icon-swap.list { background-image:url(../img/icon/list.svg); }
+.icon-swap.pencil { background-image:url(../img/icon/pencil.svg); }
 
 
 
