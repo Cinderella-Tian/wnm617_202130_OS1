@@ -127,6 +127,28 @@ function makeStatement($data) {
 
 
 
+
+
+         case "search_recent_animals":
+         $p = ["%$p[0]%",$p[1]];
+         return makeQuery($c, "SELECT *
+            FROM `track_202130_animals` a
+            RIGHT JOIN (
+               SELECT * FROM `track_202130_locations`
+               ORDER BY `date_create` DESC
+            ) 
+            ON a.id = l.animal_id
+            WHERE 
+               a.name LIKE ? 
+            AND
+               a.user_id = ?
+            GROUP BY l.animal_id
+            ", $p);
+
+
+
+
+
       /* CRUD */
 
       /* INSERT STATEMENTS */
@@ -157,7 +179,7 @@ function makeStatement($data) {
             `track_202130_locations`
             (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
             VALUES
-            (?,?,?,?,'https://via.placeholder.com/500/?text=Photo','https://via.placeholder.com/100/?text=Icon',NOW())
+            (?,?,?,?,'http://www.w3.org/2000/svg',NOW())
             ",$p,false);
          return ["id"=>$c->lastInsertId()];
 
