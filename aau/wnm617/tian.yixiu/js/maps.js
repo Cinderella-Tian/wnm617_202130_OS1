@@ -35,7 +35,7 @@ const makeMarkers = (map_el,map_locs) => {
          position: o,
          map: map,
          icon: {
-            url: o.icon,
+            url: './img/logo.png',
             scaledSize: {
                width:40,
                height:40
