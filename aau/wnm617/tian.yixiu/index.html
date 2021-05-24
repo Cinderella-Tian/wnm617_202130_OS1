@@ -48,6 +48,12 @@
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
          <div class="flex-none">
+
+            <div class="logo">
+            <img src="img/logo_max.png" alt="logo">
+         </div>
+
+
             <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
                <div class="form-control">
                   <label for="signin-username" class="form-label">Username</label>
@@ -182,10 +188,9 @@
             <a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
          </div>
 
+         
+
          <div class="floater top left" style="width:100%;padding:1em">
-            <form data-ajax="false" id="recent-search" class="hotdog hovering">
-               <input type="search" id="recent-search-value" data-role="none" placeholder="Search">
-            </form>
          </div>
 
          <div class="modal" id="recent-drawer">
@@ -343,11 +348,11 @@
                   <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
                </div>
                <div class="modal-body"><div class="overscroll">
-                  <ul>
-                     <li><a href="#user-edit-page">Change Your Info</a></li>
-                     <li><a href="#user-password-page">Change Password</a></li>
-                     <li><a href="#" class="js-logout">Sign Out</a></li>
-                  </ul>
+                  <div class="user-profile-settings">
+                     <div class="settings"><a href="#user-edit-page">Change Your Info</a></div>
+                     <div class="settings"><a href="#user-password-page">Change Password</a></div>
+                     <div class="settings"><a href="#" class="js-logout">Sign Out</a></div>
+                  </div>
                </div>
                </div>
             </div>
@@ -475,6 +480,14 @@
                   <li class="flex-none do-touch"><a href="#animal-edit-page">Edit</a></li>
                </ul>
             </div>
+
+            <div class="floater bottom right" style="font-size:1.5em">
+               <form class="icon" data-ajax="false" id="animal-update-image-form">
+                  <input type="file" id="animal-update-image-input" class="hidden" data-role="none">
+                  <label for="animal-update-image-input" style="margin:0"><img src="img/icon/pencil.svg" alt=""></label>
+               </form>
+            </div>
+
          </div>
          <div class="header animal-nav">
             <ul>
@@ -489,7 +502,8 @@
                   <a href="#choose-location-page" class="circle-button js-choose-animal">&plus;</a>
                </div>
             </div>
-            <div class="animal-bottom-section animal-info"></div>
+            <div class="animal-bottom-section animal-info">
+            </div>
          </div>
       </div>
 
